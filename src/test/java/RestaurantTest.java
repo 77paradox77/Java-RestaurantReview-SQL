@@ -68,4 +68,17 @@ public void find_findsRestaurantInDatabase_true() {
   assertTrue(testRestaurant.getId() == savedRestaurant.getId());
   }
 
+
+
+// NEEDS TO BE WRITTEN FOR REVIEWTEST AND CUISINETEST
+  @Test
+  public void save_savesCuisineIdIntoDB_true() {
+    Cuisine testCuisine = new Cuisine("Franchise");
+    testCuisine.save();
+    Restaurant testRestaurant = new Restaurant("AppleBee's", "It was okay", testCuisine.getId());
+    testRestaurant.save();
+    Restaurant savedRestaurant = Restaurant.find(testRestaurant.getId());
+    assertEquals(savedRestaurant.getCuisineId(), testCuisine.getId());
+  }
+
 }
