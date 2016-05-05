@@ -2,6 +2,9 @@
 
 <ul>
   #foreach($restaurant in $cuisine.getRestaurants())
-    <li>$restaurant.getDescription()</li>
+    <li><a href="/restaurants/$restaurant.getId()">$restaurant.getName()</a></li>
   #end
 </ul>
+
+<a href="/cuisines/$cuisine.getId()/restaurants/new">Add a restaurant</a>
+<a href="/cuisines">Back home</a>

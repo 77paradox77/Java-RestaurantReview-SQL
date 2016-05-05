@@ -1,0 +1,19 @@
+<h1>Yum!</h1>
+
+<p>Add a restaurant to $cuisine.getCuisineType().</p>
+
+<form action='/restaurants' method='post'>
+  <div class="form-group">
+    <label for="name">Restaurant</label>
+    <input id="name" name="name" class="form-control" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input id="description" name="description" class="form-control" type="text">
+  </div>
+
+ <input id="cuisine_id" name="cuisine_id" type="hidden" value="$cuisine.getId()">
+
+  <button type="submit" class="btn btn-info">Add Restaurant</button>
+</form>
