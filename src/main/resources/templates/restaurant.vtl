@@ -1,10 +1,12 @@
 <h1>$restaurant.getName()</h1>
-
+<br>
+<p>$restaurant.getDescription()</p>
+<br>
 <ul>
   #foreach($review in $restaurant.getReview())
     <li>$review.getInfo()</li>
   #end
 </ul>
 
-
+<a href="/restaurants/$restaurant.getId()/reviews/new">Add a review</a>
 <a href="/cuisines">Back home</a>

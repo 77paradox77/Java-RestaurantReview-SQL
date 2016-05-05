@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RestaurantTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-05-05T20:38:15" hostname="epicodus-31.local" time="0.067">
+<testsuite name="RestaurantTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-05-05T23:23:31" hostname="epicodus-31.local" time="0.068">
   <properties/>
   <testcase name="save_savesCuisineIdIntoDB_true" classname="RestaurantTest" time="0.017"/>
-  <testcase name="all_emptyAtFirst" classname="RestaurantTest" time="0.008"/>
+  <testcase name="all_emptyAtFirst" classname="RestaurantTest" time="0.007"/>
   <testcase name="equals_returnsTrueifNameIsTheSame" classname="RestaurantTest" time="0.004"/>
   <testcase name="getName_restaurantInstantiatesWithName_String" classname="RestaurantTest" time="0.004"/>
   <testcase name="find_findsRestaurantInDatabase_true" classname="RestaurantTest" time="0.012"/>
-  <testcase name="save_assignsIdToObject" classname="RestaurantTest" time="0.013"/>
-  <testcase name="Restaurant_instantiatesCorrectly_True" classname="RestaurantTest" time="0.004"/>
+  <testcase name="save_assignsIdToObject" classname="RestaurantTest" time="0.012"/>
+  <testcase name="Restaurant_instantiatesCorrectly_True" classname="RestaurantTest" time="0.005"/>
   <testcase name="getDescription_restaurantInstantiatesWithDescription_String" classname="RestaurantTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -1,0 +1,15 @@
+<h1>Tell Us!</h1>
+
+<p>Add a review to $restaurant.getName().</p>
+
+<form action='/reviews' method='post'>
+  <div class="form-group">
+    <label for="info">Review</label>
+    <input id="info" name="info" class="form-control" type="text">
+  </div>
+
+
+ <input id="restaurant_id" name="restaurant_id" type="hidden" value="$restaurant.getId()">
+
+  <button type="submit" class="btn btn-info">Add Review</button>
+</form>
