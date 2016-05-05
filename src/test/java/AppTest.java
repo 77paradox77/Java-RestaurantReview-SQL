@@ -32,10 +32,27 @@ public class AppTest extends FluentTest {
   public void cuisineIsCreatedTest() {
     goTo("http://localhost:4567/");
     click("a", withText("Add a new cuisine!"));
-    fill("#cuisineType").with("Italian");
+    fill("#cuisineType").with("Korean");
     submit(".btn");
     assertThat(pageSource()).contains("Your cuisine has been saved!");
   }
+  @Test
+  public void cuisineIsDisplayedTest() {
+    Cuisine myCuisine = new Cuisine("Korean");
+    myCuisine.save();
+    String cuisinePath = String.format("http://localhost:4567/cuisines/%d", myCuisine.getId());
+    goTo(cuisinePath);
+    assertThat(pageSource()).contains("Korean");
+  }
 
+  @Test
+  public void cusineShowPageDiplayName() {
+    goTo("http://localhost:4567/cuisines/new");
+    fill("#cuisineType").with("Household cheese");
+    submit(".btn");
+    click("a", withText("View cuisines")); 
+    click("a", withText("Household cheese"));
+    assertThat(pageSource()).contains("Household cheese");
+     }
 
 }

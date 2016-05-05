@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CuisineTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-05-05T18:52:16" hostname="epicodus-31.local" time="0.109">
+<testsuite name="CuisineTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-05-05T20:38:15" hostname="epicodus-31.local" time="0.089">
   <properties/>
   <testcase name="Cuisine_instantiatesCorrectly_true" classname="CuisineTest" time="0.005"/>
-  <testcase name="getRestaurants_retrievesAllRestaurantsFromDatabase_RestaurantsList" classname="CuisineTest" time="0.042"/>
+  <testcase name="getRestaurants_retrievesAllRestaurantsFromDatabase_RestaurantsList" classname="CuisineTest" time="0.028"/>
   <testcase name="find_findsCuisineInDatabase_true" classname="CuisineTest" time="0.013"/>
   <testcase name="all_emptyAtFirst" classname="CuisineTest" time="0.008"/>
-  <testcase name="save_returnsTrueIfDescriptionsAreTheSame" classname="CuisineTest" time="0.014"/>
-  <testcase name="equals_returnsTrueIfTypesAreTheSame" classname="CuisineTest" time="0.004"/>
+  <testcase name="save_returnsTrueIfDescriptionsAreTheSame" classname="CuisineTest" time="0.012"/>
+  <testcase name="equals_returnsTrueIfTypesAreTheSame" classname="CuisineTest" time="0.005"/>
   <testcase name="save_assignsIdToObject" classname="CuisineTest" time="0.012"/>
-  <testcase name="getCuisineType_cuisineInstantiatesWithCuisineType_String" classname="CuisineTest" time="0.005"/>
-  <system-out><![CDATA[[Restaurant@1955f4cd, Restaurant@4df82b84]
+  <testcase name="getCuisineType_cuisineInstantiatesWithCuisineType_String" classname="CuisineTest" time="0.004"/>
+  <system-out><![CDATA[[Restaurant@35e3fc9b, Restaurant@731c0959]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
