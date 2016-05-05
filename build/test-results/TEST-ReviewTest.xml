@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReviewTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-05T17:27:20" hostname="epicodus-31.local" time="0.093">
+<testsuite name="ReviewTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-05T18:52:16" hostname="epicodus-31.local" time="0.095">
   <properties/>
-  <testcase name="all_emptyAtFirst" classname="ReviewTest" time="0.008"/>
-  <testcase name="Review_instantiatesCorrectly_True" classname="ReviewTest" time="0.004"/>
+  <testcase name="all_emptyAtFirst" classname="ReviewTest" time="0.009"/>
+  <testcase name="Review_instantiatesCorrectly_True" classname="ReviewTest" time="0.005"/>
   <testcase name="save_savesRestaurantIdIntoDB_true" classname="ReviewTest" time="0.025"/>
-  <testcase name="save_assignsIdToObject" classname="ReviewTest" time="0.013"/>
+  <testcase name="save_assignsIdToObject" classname="ReviewTest" time="0.012"/>
   <testcase name="getReviews_retrievesAllReviewsFromDatabase_ReviewsList" classname="ReviewTest" time="0.025"/>
-  <testcase name="getInfo_reviewInstantiatesWithInfo_String" classname="ReviewTest" time="0.005"/>
+  <testcase name="getInfo_reviewInstantiatesWithInfo_String" classname="ReviewTest" time="0.004"/>
   <testcase name="find_findsReviewInDatabase_true" classname="ReviewTest" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
