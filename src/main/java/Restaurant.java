@@ -1,5 +1,6 @@
 import java.util.List;
 import org.sql2o.*;
+import java.util.Arrays;
 
 public class Restaurant {
   private int id;
@@ -43,7 +44,8 @@ public class Restaurant {
     } else {
       Restaurant newRestaurant = (Restaurant) otherRestaurant;
       return this.getName().equals(newRestaurant.getName()) &&
-        this.getDescription() == newRestaurant.getDescription() && this.getCuisineId() == newRestaurant.getCuisineId();
+        this.getDescription().equals(newRestaurant.getDescription()) &&
+        this.getCuisineId() == newRestaurant.getCuisineId();
     }
   }
 
@@ -66,6 +68,14 @@ public class Restaurant {
       .addParameter("id", id)
       .executeAndFetchFirst(Restaurant.class);
     return restaurant;
+    }
+  }
+  public List<Review> getReviews() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM review where restaurant_id=:id";
+      return con.createQuery(sql)
+      .addParameter("id", this.id)
+      .executeAndFetch(Review.class);
     }
   }
 }

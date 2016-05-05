@@ -1,23 +1,27 @@
 import org.sql2o.*;
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.Arrays;
 
 public class CuisineTest {
-  @Before
-  public void setUp() {
-    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/restaurant_review_test", null, null);
-  }
-  @After
-  public void tearDown() {
-    try(Connection con = DB.sql2o.open()) {
-      String deleteReviewsQuery = "DELETE FROM review *;";
-      String deleteRestaurantsQuery = "DELETE FROM restaurant *;";
-      String deleteCuisineQuery = "DELETE FROM cuisine *;";
-      con.createQuery(deleteReviewsQuery).executeUpdate();
-      con.createQuery(deleteRestaurantsQuery).executeUpdate();
-      con.createQuery(deleteCuisineQuery).executeUpdate();
-    }
-  }
+
+  @Rule
+  public DatabaseRule database = new DatabaseRule();
+  // @Before
+  // public void setUp() {
+  //   DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/restaurant_review_test", null, null);
+  // }
+  // @After
+  // public void tearDown() {
+  //   try(Connection con = DB.sql2o.open()) {
+  //     String deleteReviewsQuery = "DELETE FROM review *;";
+  //     String deleteRestaurantsQuery = "DELETE FROM restaurant *;";
+  //     String deleteCuisineQuery = "DELETE FROM cuisine *;";
+  //     con.createQuery(deleteReviewsQuery).executeUpdate();
+  //     con.createQuery(deleteRestaurantsQuery).executeUpdate();
+  //     con.createQuery(deleteCuisineQuery).executeUpdate();
+  //   }
+  // }
 
   @Test
   public void Cuisine_instantiatesCorrectly_true() {
@@ -67,5 +71,18 @@ public class CuisineTest {
     myCuisine.save();
     Cuisine savedCuisine = Cuisine.find(myCuisine.getId());
     assertTrue(myCuisine.equals(savedCuisine));
+  }
+
+  @Test
+  public void getRestaurants_retrievesAllRestaurantsFromDatabase_RestaurantsList() {
+    Cuisine myCuisine = new Cuisine("Korean");
+    myCuisine.save();
+    Restaurant firstRestaurant = new Restaurant("Bo Sung", "A Korean Delight", myCuisine.getId());
+    firstRestaurant.save();
+    Restaurant secondRestaurant = new Restaurant("Bugoggi Fusion", "A fine piece of Korea", myCuisine.getId());
+    secondRestaurant.save();
+    Restaurant[] restaurants = new Restaurant[] { firstRestaurant, secondRestaurant };
+    System.out.println(myCuisine.getRestaurants());
+    assertTrue(myCuisine.getRestaurants().containsAll(Arrays.asList(restaurants)));
   }
 }
