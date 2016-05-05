@@ -99,7 +99,7 @@ public class App {
       newReview.save();
 
       model.put("restaurant", restaurant);
-      model.put("template", "templates/cuisine.vtl");
+      model.put("template", "templates/cuisines.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
     }
